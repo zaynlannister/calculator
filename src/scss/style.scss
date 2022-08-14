@@ -2,4 +2,34 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  background-image: url("/src/images/bg-so-white.png");
+}
+
+.container {
+  width: 920px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  width: 50%;
+  padding-right: 20px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.calculator {
+  padding-top: 30px;
+  &__product select {
+    cursor: pointer;
+  }
+
+  &__cost {
+    background-color: #f3f3f3;
+  }
 }
