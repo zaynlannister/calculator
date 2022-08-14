@@ -19,3 +19,7 @@ const products = [
         price: 105,
     }
 ]
+
+function countPrice(price, size) {
+    return price * size
+}
