@@ -1,27 +1,31 @@
 const products = [
     {
         name: 'brick',
-        price: 49.3,
+        priceForSize: 49.3,
+        priceForWeight: 4.4
     },
 
     {
         name: 'concrete',
-        price: 79.6,
+        priceForSize: 79.6,
+        priceForWeight: 17.3
     },
 
     {
         name: 'tile',
-        price: 53.4,
+        priceForSize: 53.4,
+        priceForWeight: 4.2
     },
 
     {
         name: 'stone',
-        price: 105,
+        priceForSize: 105,
+        priceForWeight: 21.8
     }
 ]
 
-function getTotalPrice(weight, price) {
-    return weight * price
+function getTotalPrice(weight, size, priceForWeight, priceForSize) {
+    return (size * priceForSize) + (weight * priceForWeight);
 }
 
 
@@ -42,7 +46,7 @@ function handleForms() {
 
     if (!isNaN(weight) && !isNaN(size) && productName !== '0') {
         let product = products.find(item => item.name === productName);
-        let price = getTotalPrice(weight, product.price);
+        let price = getTotalPrice(weight, size, product.priceForWeight, product.priceForSize);
         showPrice(price);
     } else {
         alert('Заполните всю форму правильно!')
