@@ -29,7 +29,7 @@ function getTotalPrice(weight, size, priceForWeight, priceForSize) {
 }
 
 
-// Business Logic
+// UI
 
 const calculatorSelect = document.querySelector('.calculator__select');
 const countButton = document.querySelector('.calculator__button-count button');
