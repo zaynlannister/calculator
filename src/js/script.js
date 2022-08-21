@@ -40,8 +40,8 @@ const calculatorCostContainer = document.querySelector('.calculator__cost');
 countButton.addEventListener('click', handleForms);
 
 function handleForms() {
-    let weight = parseInt(weightInput.value.trim());
-    let size = parseInt(sizeInput.value.trim());
+    let weight = parseFloat(weightInput.value.trim());
+    let size = parseFloat(sizeInput.value.trim());
     let productName = calculatorSelect.value;
 
     if (!isNaN(weight) && !isNaN(size) && productName !== '0') {
